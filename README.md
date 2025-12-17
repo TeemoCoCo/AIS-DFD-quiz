@@ -2,10 +2,10 @@
 
 An interactive web-based quiz for students to practice labeling missing parts in Data Flow Diagrams (DFD) for Accounting Information Systems.
 
-This quiz covers 7 diagrams from the Expenditure Cycle and Revenue Cycle, with automatic checking, immediate feedback, and forgiving answer matching (ignores case and spaces).
+This quiz covers 8 diagrams from the Expenditure Cycle and Revenue Cycle, with automatic checking, immediate feedback, and forgiving answer matching (ignores case and spaces).
 
 ## Features
-- 7 interactive DFD diagrams with missing labels (A, B, C, ..., a, b, ...)
+- 8 interactive DFD diagrams with missing labels (A, B, C, ..., a, b, ...)
 - Case-insensitive and space-insensitive answer checking (e.g., "sales order", "SalesOrder", "sales  order" all accepted)
 - Handles interchangeable answers (e.g., packing slip and bill of lading can be swapped where applicable)
 - After submission:
@@ -19,10 +19,11 @@ This quiz covers 7 diagrams from the Expenditure Cycle and Revenue Cycle, with a
 1. Expenditure Cycle DFD Level 0
 2. Expenditure Cycle DFD Level 1: Ordering
 3. Expenditure Cycle DFD Level 1: Receiving
-4. Revenue Cycle DFD Level 0
-5. Revenue Cycle DFD Level 1: Sales Order Entry
-6. Revenue Cycle DFD Level 1: Shipping
-7. Revenue Cycle DFD Level 1: Billing
+4. Expenditure Cycle DFD Level 1: Cash Disbursement
+5. Revenue Cycle DFD Level 0
+6. Revenue Cycle DFD Level 1: Sales Order Entry
+7. Revenue Cycle DFD Level 1: Shipping
+8. Revenue Cycle DFD Level 1: Billing
 
 ## How to Use (For Students)
 1. Open the website.
@@ -39,6 +40,7 @@ your-project-folder/
 ├── EXP 1.0 A.png
 ├── EXP 1.1 A.png
 ├── EXP 2.1 A.png
+├── EXP 4.1 A.png
 ├── REV 1.0 A.png
 ├── REV 1.1 A.png
 ├── REV 2.1 A.png
