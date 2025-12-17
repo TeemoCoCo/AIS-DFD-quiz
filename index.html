@@ -93,14 +93,13 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      margin: 5px 10px;
+      margin: 0 10px;
     }
     button:hover:not(:disabled) { opacity: 0.9; }
     button:disabled { background: #95a5a6; cursor: not-allowed; }
     #submit-btn { background: #27ae60; }
     #prev-btn { background: #95a5a6; display: none; }
     #retry-btn { background: #f39c12; display: none; }
-    #home-btn { background: #34495e; }  /* Always visible after quiz starts */
     #next-btn { background: #3498db; display: none; }
     .feedback {
       margin-top: 20px;
@@ -142,14 +141,12 @@
         <button id="prev-btn">← Previous Diagram</button>
         <button id="retry-btn">Retry This Diagram</button>
         <button id="next-btn">Next Diagram →</button>
-        <button id="home-btn">Back to Home</button>
       </div>
     </div>
   </main>
 
   <script>
     const diagrams = [
-      /* (Your full diagrams array remains exactly the same as before) */
       {
         id: 1,
         title: "Expenditure Cycle DFD Level 0",
@@ -178,7 +175,93 @@
         },
         interchangeable: { EF: ["E","F"], bc: ["b","c"] }
       },
-      /* ... all other 6 diagrams exactly as in previous version ... */
+      {
+        id: 2,
+        title: "Expenditure Cycle DFD Level 1: Ordering",
+        image: "diagrams/EXP 1.1 A.png",
+        labels: ["A","B","C","D","E","a","b"],
+        answers: {
+          A: "Revenue Cycle",
+          B: "Inventory",
+          C: "Select supplier",
+          D: "Suppliers",
+          E: "Purchase Orders",
+          a: "Purchase requisition",
+          b: "Copy of purchase order"
+        }
+      },
+      {
+        id: 3,
+        title: "Expenditure Cycle DFD Level 1: Receiving",
+        image: "diagrams/EXP 2.1 A.png",
+        labels: ["A","B","C","a","b","c","d","e"],
+        answers: {
+          A: "Supplier",
+          B: "Suppliers",
+          C: "Revenue cycle",
+          a: "Goods",
+          b: "Receiving report",
+          c: "Goods",
+          d: "Receiving report",
+          e: "Receiving report"
+        },
+        interchangeable: { ab: ["a","b"], cd: ["c","d"] }
+      },
+      {
+        id: 4,
+        title: "Revenue Cycle DFD Level 0",
+        image: "diagrams/REV 1.0 A.png",
+        labels: ["A","B","C","D","a","b","c","d","e","f","g","h","i"],
+        answers: {
+          A: "Sales order entry",
+          B: "Shipping",
+          C: "Billing",
+          D: "Cash collections",
+          a: "Sales Order",
+          b: "Packing slip",
+          c: "Bill of lading",
+          d: "Invoice",
+          e: "Monthly statements",
+          f: "Sales",
+          g: "Bill of lading",
+          h: "Orders",
+          i: "Payments"
+        },
+        interchangeable: { bc: ["b","c"], de: ["d","e"] }
+      },
+      {
+        id: 5,
+        title: "Revenue Cycle DFD Level 1: Sales Order Entry",
+        image: "diagrams/REV 1.1 A.png",
+        labels: ["A","B","C","a","b","c"],
+        answers: {
+          A: "Take order",
+          B: "Approve credit",
+          C: "Inventory",
+          a: "Orders",
+          b: "Sales order",
+          c: "Picking ticket"
+        }
+      },
+      {
+        id: 6,
+        title: "Revenue Cycle DFD Level 1: Shipping",
+        image: "diagrams/REV 2.1 A.png",
+        labels: ["A","B","C","D","a","b","c","d","e","f"],
+        answers: {
+          A: "Pick and Pack",
+          B: "Ship goods",
+          C: "Sales Order",
+          D: "Inventory",
+          a: "Picking ticket",
+          b: "Picking ticket",
+          c: "Goods",
+          d: "Sales order",
+          e: "Bill of lading",
+          f: "Packing slip"
+        },
+        interchangeable: { ef: ["e","f"] }
+      },
       {
         id: 7,
         title: "Revenue Cycle DFD Level 1: Billing",
@@ -211,7 +294,6 @@
     const prevBtn = document.getElementById('prev-btn');
     const retryBtn = document.getElementById('retry-btn');
     const nextBtn = document.getElementById('next-btn');
-    const homeBtn = document.getElementById('home-btn');
     const backHome = document.getElementById('back-home');
 
     function normalize(str) {
@@ -250,7 +332,6 @@
       prevBtn.style.display = 'none';
       retryBtn.style.display = 'none';
       nextBtn.style.display = 'none';
-      homeBtn.style.display = 'inline-block';  // Always show from the start
 
       diag.labels.forEach(label => {
         const div = document.createElement('div');
@@ -267,6 +348,7 @@
       submitBtn.style.display = 'none';
       retryBtn.style.display = 'inline-block';
 
+      // Previous button
       if (currentDiagramIndex > 0) {
         prevBtn.style.display = 'inline-block';
         prevBtn.onclick = () => startQuiz(currentDiagramIndex - 1);
@@ -274,17 +356,16 @@
         prevBtn.style.display = 'none';
       }
 
+      // Next / Back to Home button
       if (currentDiagramIndex < diagrams.length - 1) {
         nextBtn.textContent = 'Next Diagram →';
         nextBtn.onclick = () => startQuiz(currentDiagramIndex + 1);
         nextBtn.style.display = 'inline-block';
       } else {
-        nextBtn.textContent = 'Finish & Back to Home';
+        nextBtn.textContent = 'Back to Home';
         nextBtn.onclick = loadHome;
         nextBtn.style.display = 'inline-block';
       }
-
-      homeBtn.style.display = 'inline-block';  // Ensure it's always visible
     }
 
     function checkAnswers() {
@@ -340,7 +421,6 @@
 
     submitBtn.onclick = checkAnswers;
     retryBtn.onclick = retryCurrent;
-    homeBtn.onclick = loadHome;
     backHome.onclick = (e) => {
       e.preventDefault();
       loadHome();
