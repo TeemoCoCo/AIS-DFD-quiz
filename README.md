@@ -1,72 +1,86 @@
-# DFD Labeling Quiz – Expenditure & Revenue Cycles
+Accounting Information Systems – DFD Labeling Practice & Past Exams
+An interactive, fully offline-capable web application for students to practice labeling Data Flow Diagrams (DFD) from both regular exercises and real past exam questions.
+The site features two separate sections:
 
-An interactive web-based quiz for students to practice labeling missing parts in Data Flow Diagrams (DFD) for Accounting Information Systems.
+DFD Labeling Practice – Standard textbook-style DFD diagrams
+Past Exam DFD Labeling – Actual DFD questions from previous exams (2015–2025)
 
-This quiz covers 8 diagrams from the Expenditure Cycle and Revenue Cycle, with automatic checking, immediate feedback, and forgiving answer matching (ignores case and spaces).
+Features
 
-## Features
-- 8 interactive DFD diagrams with missing labels (A, B, C, ..., a, b, ...)
-- Case-insensitive and space-insensitive answer checking (e.g., "sales order", "SalesOrder", "sales  order" all accepted)
-- Handles interchangeable answers (e.g., packing slip and bill of lading can be swapped where applicable)
-- After submission:
-  - Shows correct/incorrect for each label
-  - Displays total score
-  - Buttons: Previous Diagram ← | Retry This Diagram | Next Diagram → (or Back to Home on the last diagram)
-- Clean, responsive design (works on desktop and mobile)
-- Fully offline-capable (no server needed once hosted)
+Clean two-column layout: diagram on the left, answer inputs on the right
+Responsive design – works perfectly on desktop, tablet, and mobile
+Student-friendly answer checking:
+Case-insensitive
+Space-insensitive
+Plural tolerance (e.g., "Packing slip" = "Packing slips")
+Multiple accepted answers per label (e.g., "cheque"/"check")
+Interchangeable pairs fully supported (even with plural/singular variations)
 
-## Diagrams Included
-1. Expenditure Cycle DFD Level 0
-2. Expenditure Cycle DFD Level 1: Ordering
-3. Expenditure Cycle DFD Level 1: Receiving
-4. Expenditure Cycle DFD Level 1: Cash Disbursement
-5. Revenue Cycle DFD Level 0
-6. Revenue Cycle DFD Level 1: Sales Order Entry
-7. Revenue Cycle DFD Level 1: Shipping
-8. Revenue Cycle DFD Level 1: Billing
+Immediate feedback with score
+Navigation: Previous / Next / Retry / Back to List
+Top navigation menu to switch between Practice and Past Exams
+Clicking a nav link shows only that section for focused practice
+All images stored in separate folders for easy organization
 
-## How to Use (For Students)
-1. Open the website.
-2. Click on any diagram to start.
-3. Fill in the missing labels.
-4. Click "Submit Answers" to check your work.
-5. Use "Retry" to try again, "Previous/Next" to navigate, or "Back to Home" to return to the list.
-
-## File Structure
+Folder Structure
 your-project-folder/
-├── index.html          ← Main quiz file (open this in browser)
-├── README.md           ← This file
-└── diagrams/           ← Folder containing the 7 diagram images
-├── EXP 1.0 A.png
-├── EXP 1.1 A.png
-├── EXP 2.1 A.png
-├── EXP 4.1 A.png
-├── REV 1.0 A.png
-├── REV 1.1 A.png
-├── REV 2.1 A.png
-└── REV 3.1 A.png
+├── index.html                  ← Main file (this one)
+├── README.md                   ← This file
+└── diagrams/
+    ├── practice/               ← Regular practice diagrams
+    │   ├── EXP 1.0 A.png
+    │   ├── EXP 1.1 A.png
+    │   ├── EXP 2.1 A.png
+    │   ├── EXP 4.1 A.png
+    │   ├── REV 1.0 A.png
+    │   ├── REV 1.1 A.png
+    │   ├── REV 2.1 A.png
+    │   └── REV 3.1 A.png
+    └── past paper/             ← Past exam diagrams
+        ├── 1516SEM2_Q1d.png
+        ├── 1819SEM1_Q2a.png
+        ├── 2223SEM1_Q1a.png
+        ├── 2223SEM1_Q2a.png
+        ├── 2223SEM2_Q1a.png
+        ├── 2223SEM2_Q2a.png
+        └── 2425SEM1_Q2a.png
 
-## How to Run Locally
-1. Download or clone this repository.
-2. Place all files exactly as shown above.
-3. Open `index.html` in any web browser (Chrome, Firefox, etc.).
-   - No internet required after loading!
+How to Use (For Students)
 
-## How to Host Online (Free Options)
-### Recommended: GitHub Pages
-1. Create a GitHub account at https://github.com
-2. Create a new public repository.
-3. Upload `index.html`, the `diagrams` folder, and this `README.md`.
-4. Go to Settings → Pages → Set source to "main" branch / root folder.
-5. Your quiz will be live at: `https://yourusername.github.io/your-repo-name/`
+Open index.html in any web browser (no internet needed after loading).
+Use the top navigation to choose:
+DFD Labeling Practice – for regular exercises
+Past Exam DFD Labeling – for real exam-style questions
 
-## For Teachers/Instructors
-- Fully client-side — no data collected, no login required.
-- Easy to customize: edit correct answers directly in the JavaScript section of `index.html`.
-- Share the link with students via email, LMS (Moodle, Google Classroom), or QR code.
+Click any diagram card to start labeling.
+Type answers in the right column.
+Click Submit Answers to check your work.
+Use Previous/Next to navigate, Retry to try again, or Back to List to return.
 
-## License
-Free to use, modify, and distribute for educational purposes.
+How to Run Locally
 
----
-Created with ❤️ for Accounting Information Systems students.
+Download or clone this repository.
+Ensure the folder structure above is maintained (especially the diagrams subfolders).
+Double-click index.html or open it in your browser.
+
+How to Host Online (Free & Easy)
+GitHub Pages (Recommended)
+
+Create a free GitHub account.
+Create a new public repository.
+Upload index.html, README.md, and the entire diagrams folder.
+Go to Settings → Pages → Set source to "main" branch / root.
+Your site will be live at: https://yourusername.github.io/your-repo-name/
+
+Other free options: Netlify, Vercel, Cloudflare Pages (all support drag-and-drop or GitHub connect).
+For Teachers / Customization
+
+Add new diagrams by editing the practiceDiagrams or pastDiagrams arrays in the <script> section.
+Support for multiple correct answers: use arrays, e.g., ["Cheque", "Check"]
+Easily change titles, labels, or add interchangeable pairs.
+No backend or database needed – pure HTML/CSS/JS.
+
+License
+Free for educational use. Feel free to modify and share with your students.
+
+Created for Accounting Information Systems students – Happy practicing! 🚀
