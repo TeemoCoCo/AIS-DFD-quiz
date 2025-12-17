@@ -13,7 +13,7 @@ The site features two separate sections:
   - Case-insensitive
   - Space-insensitive
   - Plural tolerance (e.g., "Packing slip" = "Packing slips")
-  - Multiple accepted answers per label (e.g., "cheque"/"check")
+  - Multiple accepted answers per label (e.g., "Sales invoice"/"Invoice")
   - Interchangeable pairs fully supported (even with plural/singular variations)
 - Immediate feedback with score
 - Navigation: Previous / Next / Retry / Back to List
