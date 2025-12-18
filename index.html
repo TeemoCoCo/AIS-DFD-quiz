@@ -420,7 +420,7 @@ let currentPracticeIndex = -1;
 
     function normalize(str) {
       if (!str) return "";
-      return str.replace(/\s+/g, "").toLowerCase().replace(/s$/, "");
+      return str.trim().toLowerCase().split(/\s+/).map(word => word.replace(/s$/, "")).join("");
     }
 
     // Practice Section
