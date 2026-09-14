@@ -6,8 +6,8 @@
   <title>Accounting Information Systems – Practice & Past Exams</title>
   <style>
     * { box-sizing: border-box; }
-    :root { color-scheme: light; --page: #f7fafc; --surface: #ffffff; --surface-muted: #edf4f7; --ink: #334155; --muted: #64748b; --line: #cbd5df; --accent: #3b82a0; --accent-strong: #28627c; --accent-contrast: #ffffff; --header-bg: #e5f0f4; --header-ink: #334155; --neutral-bg: #dce8ed; --neutral-ink: #334155; --shadow: 0 8px 24px rgba(51, 65, 85, 0.08); }
-    [data-theme="dark"] { color-scheme: dark; --page: #30383d; --surface: #3b454b; --surface-muted: #465158; --ink: #f5f7f5; --muted: #d0d7d6; --line: #68757b; --accent: #ff8b73; --accent-strong: #ffab97; --accent-contrast: #20272b; --header-bg: #252d31; --header-ink: #f5f7f5; --neutral-bg: #56636b; --neutral-ink: #f5f7f5; --shadow: 0 8px 24px rgba(0, 0, 0, 0.2); }
+    :root { color-scheme: light; --page: #f7fafc; --surface: #ffffff; --surface-muted: #edf4f7; --ink: #334155; --muted: #64748b; --line: #cbd5df; --accent: #3b82a0; --accent-strong: #28627c; --accent-contrast: #ffffff; --header-bg: #e5f0f4; --header-ink: #334155; --neutral-bg: #dce8ed; --neutral-ink: #334155; --success-bg: #d8f3e4; --success-ink: #17633b; --warning-bg: #ffedbf; --warning-ink: #795000; --review-bg: #eadcf7; --review-ink: #5c327c; --shadow: 0 8px 24px rgba(51, 65, 85, 0.08); }
+    [data-theme="dark"] { color-scheme: dark; --page: #30383d; --surface: #3b454b; --surface-muted: #465158; --ink: #f5f7f5; --muted: #d0d7d6; --line: #68757b; --accent: #ff8b73; --accent-strong: #ffab97; --accent-contrast: #20272b; --header-bg: #252d31; --header-ink: #f5f7f5; --neutral-bg: #56636b; --neutral-ink: #f5f7f5; --success-bg: #4c8066; --success-ink: #ffffff; --warning-bg: #94733d; --warning-ink: #ffffff; --review-bg: #755692; --review-ink: #ffffff; --shadow: 0 8px 24px rgba(0, 0, 0, 0.2); }
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: var(--page); color: var(--ink); line-height: 1.6; }
     .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 10; padding: 10px 14px; background: var(--surface); color: var(--accent); border-radius: 2px; font-weight: bold; }
     .skip-link:focus { left: 8px; }
@@ -52,10 +52,12 @@
     button:hover:not(:disabled) { opacity: 0.9; transform: translateY(-1px); }
     button:disabled { opacity: 0.6; cursor: not-allowed; }
     .input-group input:focus { outline: 2px solid rgba(52, 152, 219, 0.35); border-color: #3498db; }
-    .submit-btn, .next-btn { background: var(--accent); }
+    .submit-btn { background: var(--success-bg); color: var(--success-ink); }
+    .next-btn, .back-btn { background: var(--accent); color: var(--accent-contrast); }
     .back-btn, .home-btn { background: var(--neutral-bg); color: var(--neutral-ink); margin: 0 0 20px; }
-    .prev-btn { background: var(--muted); display: none; }
-    .retry-btn { background: var(--accent-strong); display: none; }
+    .prev-btn { background: var(--neutral-bg); color: var(--neutral-ink); display: none; }
+    .retry-btn { background: var(--warning-bg); color: var(--warning-ink); display: none; }
+    .review-btn { background: var(--review-bg) !important; color: var(--review-ink); }
     .feedback { margin-top: 30px; padding: clamp(16px, 3vw, 24px); border: 1px solid var(--line); border-radius: 0; background: var(--surface-muted); grid-column: 1 / -1; }
     .review-heading { margin: 0 0 14px; color: var(--ink); }
     .review-summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
