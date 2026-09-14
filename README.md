@@ -20,6 +20,8 @@ The site features two separate sections:
 - Detailed answer review showing submitted answers, correct answers, and items to revisit
 - Accessible keyboard navigation for diagram cards, buttons, and answer fields
 - Clear quiz guidance, progress information, and responsive controls on small screens
+- Modernist visual design with a restrained palette, clean grid, and high-contrast typography
+- Light and dark modes with the selected theme saved locally
 - Navigation: Previous / Next / Retry / Back to List
 - Top navigation menu to switch between Practice and Past Exams
 - Clicking a nav link shows only that section for focused practice
