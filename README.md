@@ -18,6 +18,8 @@ The site features two separate sections:
 - Immediate feedback with score
 - Per-diagram best scores are saved locally in the browser and shown on each diagram card
 - Detailed answer review showing submitted answers, correct answers, and items to revisit
+- Accessible keyboard navigation for diagram cards, buttons, and answer fields
+- Clear quiz guidance, progress information, and responsive controls on small screens
 - Navigation: Previous / Next / Retry / Back to List
 - Top navigation menu to switch between Practice and Past Exams
 - Clicking a nav link shows only that section for focused practice
@@ -86,4 +88,4 @@ Free for educational use. Feel free to modify and share with your students.
 ---
 Created for Accounting Information Systems students – Happy practicing! 🚀
 
-*Last updated: December 2025*
+*Last updated: September 2026*
