@@ -16,10 +16,13 @@ The site features two separate sections:
   - Multiple accepted answers per label (e.g., "Sales invoice"/"Invoice")
   - Interchangeable pairs fully supported (even with plural/singular variations)
 - Immediate feedback with score
+- Per-diagram best scores are saved locally in the browser and shown on each diagram card
+- Detailed answer review showing submitted answers, correct answers, and items to revisit
 - Navigation: Previous / Next / Retry / Back to List
 - Top navigation menu to switch between Practice and Past Exams
 - Clicking a nav link shows only that section for focused practice
 - All images stored in separate folders for easy organization
+- Mobile-first responsive layout for phones, tablets, and desktop screens
 
 ## Folder Structure
 ```
